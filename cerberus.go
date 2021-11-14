@@ -34,12 +34,6 @@ var (
 )
 
 func init() {
-
-	//Get both API tokens. Discord and Steam
-	//Shorthand assignment. Same as:
-	//var botToken, boterr = ioutil.....
-	//Since we do shorthand assignment we have to do that stupid shit on lines 34 & 35
-	//Rather than just setting the variables
 	configData, err := ioutil.ReadFile("hermes.config")
 	if err != nil {
 		log.Fatal(err)
