@@ -34,9 +34,9 @@ var (
 )
 
 func init() {
-	configData, err := ioutil.ReadFile("hermes.config")
+	configData, err := ioutil.ReadFile("cerberus.config")
 	if err != nil {
-		log.Fatal(err)
+		configData = []byte(os.Getenv("cerberus_config"))
 	}
 
 	file, err := os.OpenFile("logs.txt", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
