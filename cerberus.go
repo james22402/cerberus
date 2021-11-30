@@ -186,7 +186,7 @@ func messageCreate(ctx *dgc.Ctx) {
 		if err != nil {
 			ErrorLogger.Println(err)
 		}
-		if !contains("841202743892377600", member.Roles) {
+		if !contains("841184009802219520", member.Roles) {
 			ctx.Session.ChannelMessageSendReply(ctx.Event.ChannelID, "You are not allowed to remove "+username+" from the whitelist.", ctx.Event.Message.Reference())
 			return
 		}
